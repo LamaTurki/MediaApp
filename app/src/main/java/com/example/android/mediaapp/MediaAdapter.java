@@ -39,15 +39,11 @@ public class MediaAdapter extends ArrayAdapter<media> {
         miwokTextView.setText(current.getmName());
 
         ImageView imageView = (ImageView) listItemView.findViewById(R.id.image);
-        // Check if an image is provided for this word or not
         if (current.hasImage()) {
-            // If an image is available, display the provided image based on the resource ID
             imageView.setImageResource(current.getmImage());
-            // Make sure the view is visible
             imageView.setVisibility(View.VISIBLE);
         } else {
-            // Otherwise hide the ImageView (set visibility to GONE)
-            imageView.setVisibility(View.INVISIBLE);
+            imageView.setVisibility(View.GONE);
         }
 
 
